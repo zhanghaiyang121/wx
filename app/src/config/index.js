@@ -23,5 +23,7 @@ export const api={
         admin:baseurl+'/admin/movie',
         del:baseurl+'/admin/movie/del',
         detail:baseurl+'/movie/detail',
-    }
+    },
+    sdk:baseurl+'/jdk',
+    autho:baseurl+"/test"
 }

@@ -4,6 +4,11 @@ exports.signin = async(ctx,next)=>{
     let {email,password}=ctx.request.body
     const user=await User.findOne({email})
     const isMatch = await user.comparePassword(password, user.password)
+    const oauth=new WechatOAuth(config.wechat)
+    let url1='http://wechat10day.vipgz1.idcfengye.com/li'
+    const url=oauth.getAuthorizeURL('snsapi_base',url1,'a')
+    console.log(url)
+    ctx.redirect(url)
     console.log(isMatch)
     ctx.body=user
 }

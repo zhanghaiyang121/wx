@@ -9,9 +9,12 @@ import movielist from '@/components/movielist'
 import categoryadmin from '@/components/categoryadmin'
 import categorylist from '@/components/categorylist'
 import detail from '@/components/detail'
+import sdk from '@/components/sdk'
+import autho from '@/components/autho'
 Vue.use(Router)
 
 export default new Router({
+  // mode:history,
   routes: [
     {
       path: '/',
@@ -57,6 +60,16 @@ export default new Router({
       path: '/detail',
       name: 'detail',
       component: detail
+    },
+    {
+      path: '/sdk',
+      name: 'sdk',
+      component: sdk
+    },
+    {
+      path: '/autho',
+      name: 'autho',
+      component: autho
     }
   ]
 })
